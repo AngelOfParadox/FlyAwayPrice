@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Fly Away Price",
+  "description": "This extension rounds prices on Amazon.com",
+  "version": "1.0",
+  "host_permissions": ["https://www.amazon.com/*"],
+  "action": {
+    "default_icon": "icons.png",
+    "sizes": "128x128",
+    "type": "image/png",
+    "default_popup": "popup.html",
+    "default_title": "Eliminates that brainwashing 💸 ( ˙▿˙ )"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
